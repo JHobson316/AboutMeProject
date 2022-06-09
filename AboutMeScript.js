@@ -115,4 +115,5 @@ function q7(){
     else{
         alert("Incorrect!");
     }
+    alert("Congratulations! You got "+ points+ " questions correct.")
 }
