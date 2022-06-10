@@ -102,7 +102,7 @@ function q6(){
         alert("Correct!");
        // points = points++;
         q7();
-        break;
+        break;localStorage
     }
     else if (Answer6 != "5"){
         alert("Incorrect! Try again.");
