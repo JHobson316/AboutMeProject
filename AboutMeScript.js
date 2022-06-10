@@ -1,8 +1,5 @@
 "use strict"
 var points = 0;
-function PointGet(){
-    let points = points + 1;
-}
 function GameIntro(){
     alert("Hello! It seems like you want to play a game.");
     //This prompt asks the user to input their name
@@ -13,11 +10,11 @@ function GameIntro(){
 }
 function q1(){
     // The prompt asks for the user to input y or n. If the input matches one of these,
-    let Answer1 = prompt("Nintendo's flagship character, Mario, was initially named Jumpman.");
-    let Answer1L = Answer1.toLowerCase();
-    if (Answer1L == "y"){
+    let answer1 = prompt("Nintendo's flagship character, Mario, was initially named Jumpman.");
+    let answer1L = answer1.toLowerCase();
+    if (answer1L == "y"){
         console.log("correct");
-        PointGet();
+        points++;
         alert("Maybe?");
         q2();
     }
@@ -30,16 +27,15 @@ function q1(){
     }
 }
 function q2(){
-    let Answer2 = prompt("Sony bought Bungie Studios in 2022 for $4.8 Billion.");
-    let Answer2L = Answer2.toLowerCase();
-    if (Answer2L == "y"){
+    let answer2 = prompt("Sony bought Bungie Studios in 2022 for $4.8 Billion.");
+    let answer2L = answer2.toLowerCase();
+    if (answer2L == "y"){
         console.log("incorrect");
-        points();
         q3();
     }
     else if (Answer2L == "n"){
         console.log("correct");
-        points();
+        points++;
         q3();
     }
     else {
@@ -55,7 +51,7 @@ function q3(){
     }
     else if (Answer3L == "n"){
         console.log("correct");
-        points = points++;
+        points++;
         q4();
     }
     else {
@@ -67,7 +63,7 @@ function q4(){
     let Answer4L = Answer4.toLowerCase();
     if (Answer4L == "y"){
         console.log("correct");
-        points = points++;
+        points++;
         q5();
     }
     else if (Answer4L == "n"){
@@ -83,7 +79,7 @@ function q5(){
     let Answer5L = Answer5.toLowerCase();
     if (Answer5L == "y"){
         console.log("correct");
-        points = points++;
+        points++;
         q6();
     }
     else if (Answer5L == "n"){
@@ -100,7 +96,7 @@ function q6(){
         let Answer6 = prompt("Guess a number between 1 and 10.");
         if (Answer6 == "5"){
         alert("Correct!");
-       // points = points++;
+        points++;
         q7();
         break;localStorage
     }
@@ -113,9 +109,11 @@ function q7(){
     const colors = ["red", "purple", "yellow", "orange"];
     for (let i = 0; i < 6; i++){
     let Answer7 = prompt("which of the following are primary colors? (There's more than one answer, so guess either one.) Orange, Yellow, Red, or Purple?");
-    let Answer7L = Answer7.toLocaleLowerCase();
+    let Answer7L = Answer7.toLowerCase();
     if (Answer7L == "red" || Answer7L == "yellow"){
+
        points++;
+
         alert("Correct!");
         break;
     }
@@ -123,5 +121,8 @@ function q7(){
         alert("Incorrect!");
        
     }
+
 }
-}
+
+    alert("Congratulations! You got "+ points+ " questions correct.")
+
