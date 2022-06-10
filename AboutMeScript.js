@@ -98,6 +98,7 @@ function q6(){
         alert("Correct!");
         points++;
         q7();
+        break;localStorage
     }
     else if (Answer6 != "5"){
         alert("Incorrect! Try again.");
@@ -106,14 +107,22 @@ function q6(){
 }
 function q7(){
     const colors = ["red", "purple", "yellow", "orange"];
+    for (let i = 0; i < 6; i++){
     let Answer7 = prompt("which of the following are primary colors? (There's more than one answer, so guess either one.) Orange, Yellow, Red, or Purple?");
     let Answer7L = Answer7.toLowerCase();
     if (Answer7L == "red" || Answer7L == "yellow"){
-        points++;
+
+       points++;
+
         alert("Correct!");
+        break;
     }
     else{
         alert("Incorrect!");
+       
     }
-    alert("Congratulations! You got "+ points+ " questions correct.")
+
 }
+
+    alert("Congratulations! You got "+ points+ " questions correct.")
+
