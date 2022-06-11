@@ -102,6 +102,7 @@ function q6() {
     let num = "5";
     //Creating the loop for having a certain amount of guesses to get the question correct
     for (let guesses = 4; guesses > 0; --guesses) {
+<<<<<<< HEAD
         let answer6 = prompt(`Guess a number between 1 and 10. You have ${guesses} guesses left.`);
         // If the answer is correct, a point is added, the next question's function is called, and the loop is broken.
         if (answer6 == "5") {
@@ -144,3 +145,4 @@ function q7() {
         }
     }
 }
+
